@@ -1,0 +1,30 @@
+@import "./../../styles/colors.scss";
+
+.loginContainer {
+  padding: 20px;
+  height: 60vh;
+  width: 40vh;
+  min-width: 300px;
+  min-height: 500px;
+  margin: auto;
+}
+
+.gridSpacing {
+  padding: 10vh 0;
+}
+
+.avatarStyle {
+  background-color: $primary-link-color;
+}
+
+.register {
+  padding-top: 2vh;
+}
+
+.formContainer {
+  height: 90%;
+}
+
+.heading {
+  padding-bottom: 2vh;
+}
