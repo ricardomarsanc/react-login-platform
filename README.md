@@ -1,4 +1,4 @@
-# Playtomic Technical Assessment
+# React Login Platform
 
 This project was created using [Create React App](https://github.com/facebook/create-react-app). The main reasons are that since the project scope
 is not too big, Create React App is a good starting point to include all the necessary dependencies to work with TypeScript and Redux. In case the
