@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CssBaseline, Toolbar, Typography } from "@mui/material";
+import { Box, CssBaseline, Toolbar } from "@mui/material";
 import SideBar from "./../SideBar/SideBar";
 import ApplicationBar from "./../ApplicationBar/ApplicationBar";
 import Weather from "./../Weather/Weather";
