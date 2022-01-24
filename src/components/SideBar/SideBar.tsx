@@ -53,6 +53,7 @@ const SideBar = () => {
             width: DRAWER_WIDTH,
             boxSizing: "border-box",
           },
+          backgroundColor: "#f8f8f8",
         }}>
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
