@@ -5,10 +5,16 @@ import { useDispatch } from "react-redux";
 import { Menu, MenuItem, IconButton } from "@mui/material";
 import styles from "./ApplicationBar.module.scss";
 import { AccountCircle } from "@mui/icons-material";
+import { auth } from "../../firebaseConfig";
 
 const ApplicationBar = () => {
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -51,8 +57,7 @@ const ApplicationBar = () => {
               }}
               open={Boolean(anchorEl)}
               onClose={handleClose}>
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem color='inherit' onClick={() => dispatch(logout())}>
+              <MenuItem color='inherit' onClick={handleLogout}>
                 Logout
               </MenuItem>
             </Menu>

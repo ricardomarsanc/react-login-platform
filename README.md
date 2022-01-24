@@ -5,27 +5,32 @@ is not too big, Create React App is a good starting point to include all the nec
 project scope increases in the future, it will be possible to use the `eject` command to uncouple the application and be able to export it with
 tools like Webpack or use another provider instead.
 
+## Information
+
+The application has been built using Firebase as a way to deploy and authenticate users in the app.
+
+- Test user: test1@test.com
+- Password: test01
+
+Feel free to register with a new user and login into the page.
+
+I haven't used techniques like Mobile first or so, but I tried to keep everything "usable" for almost every screen size.
+
+## Further Work
+
+- Refactor code for Weather/Country components to inherit from a more generic one
+- Hide environment variables using (for example) external tools like GitGuardian
+- Add a more meaningful error logging both for Login and for Weather/Country components for when reject API response
+- Add testing (Jest + React Testing Library)
+- Add storybook to the project
+- Add new ways of authentication like Google Authentication Provided (Already installed but not activated)
+
 ## Available Scripts
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 

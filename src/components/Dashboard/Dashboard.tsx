@@ -3,6 +3,7 @@ import { Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 import SideBar from "./../SideBar/SideBar";
 import ApplicationBar from "./../ApplicationBar/ApplicationBar";
 import Weather from "./../Weather/Weather";
+import Country from "./../Country/Country";
 
 type DashboardProps = {
   tab: string;
@@ -19,11 +20,10 @@ const Dashboard = (props: DashboardProps) => {
         <Toolbar />
         {tab === "home" ? (
           <>
-            <Typography paragraph>Home</Typography>
             <Weather />
           </>
         ) : (
-          <Typography paragraph>Settings</Typography>
+          <Country />
         )}
       </Box>
     </Box>

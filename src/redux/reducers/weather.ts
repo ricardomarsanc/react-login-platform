@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import WeatherService, { CityDataObj } from "../../services/WeatherService";
 
 export interface WeatherData {
-  weatherInfo: Object | undefined;
+  weatherInfo: any | undefined;
   loading: boolean;
   error: boolean;
   errorMessage: string;
@@ -26,14 +26,17 @@ const initialState = {
 export const weatherSlice = createSlice({
   name: "weather",
   initialState,
-  reducers: {},
+  reducers: {
+    resetWeatherData(state) {
+      state.weatherInfo = undefined;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getWeatherData.pending, (state: WeatherData) => {
       state.weatherInfo = undefined;
       state.loading = true;
     });
     builder.addCase(getWeatherData.fulfilled, (state: WeatherData, payload) => {
-      console.log("Payload async thunk: ", payload.payload);
       state.weatherInfo = payload.payload;
       state.loading = false;
     });
@@ -51,5 +54,5 @@ export const weatherSlice = createSlice({
   },
 });
 
-// export const { ... } = weatherSlice.actions;
+export const { resetWeatherData } = weatherSlice.actions;
 export const weatherReducer = weatherSlice.reducer;
