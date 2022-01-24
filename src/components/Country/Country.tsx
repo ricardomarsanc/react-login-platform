@@ -31,8 +31,6 @@ const Country = () => {
     dispatch(getCountryData(sanitizedDataObj));
   }, [dispatch]);
 
-  console.log(sanitizedCountryData);
-
   return (
     <>
       {country.countryInfo ? (

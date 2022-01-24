@@ -5,10 +5,11 @@ import styles from "./SignForm.module.scss";
 type SignFormProps = {
   onSubmit: Function;
   submitTxt: string;
+  isSignUp: boolean;
 };
 
 const SignForm = (props: SignFormProps) => {
-  const { submitTxt, onSubmit } = props;
+  const { submitTxt, onSubmit, isSignUp } = props;
 
   const [userId, setUserId] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -36,6 +37,7 @@ const SignForm = (props: SignFormProps) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <Button
+          color={isSignUp ? "primary" : "success"}
           className={styles.submitBtn}
           variant='contained'
           type='submit'

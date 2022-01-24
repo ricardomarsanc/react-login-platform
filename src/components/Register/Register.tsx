@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, Avatar } from "@mui/material";
+import { Grid, Paper, Avatar, Link } from "@mui/material";
 import styles from "./Register.module.scss";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SignForm from "../SignForm/SignForm";
@@ -48,7 +48,14 @@ const Register = () => {
             <AccountCircleOutlinedIcon />
           </Avatar>
           <h1 className={styles.heading}>{textSubmit}</h1>
-          <SignForm onSubmit={registerToApp} submitTxt={textSubmit} />
+          <SignForm
+            isSignUp={true}
+            onSubmit={registerToApp}
+            submitTxt={textSubmit}
+          />
+          <Link variant='body2' className={styles.register} href='/login'>
+            Back to login page
+          </Link>
         </Grid>
       </Paper>
     </Grid>

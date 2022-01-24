@@ -44,8 +44,6 @@ const Weather = () => {
     };
   }, [dispatch]);
 
-  console.log("Weather: ", sanitizedWeatherData);
-
   return (
     <>
       {weather.weatherInfo ? (

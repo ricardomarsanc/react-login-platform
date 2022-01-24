@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import InboxIcon from "@mui/icons-material/Inbox";
 import MailIcon from "@mui/icons-material/Mail";
-import styles from "./SideBar.module.scss";
 
 const DRAWER_WIDTH = 240;
 

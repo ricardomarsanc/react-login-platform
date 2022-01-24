@@ -54,7 +54,11 @@ const Login = () => {
               <AccountCircleOutlinedIcon />
             </Avatar>
             <h1 className={styles.heading}>{textSubmit}</h1>
-            <SignForm onSubmit={loginToApp} submitTxt={textSubmit} />
+            <SignForm
+              isSignUp={false}
+              onSubmit={loginToApp}
+              submitTxt={textSubmit}
+            />
             <Link className={styles.register} href='/register'>
               Don't have an account yet? Register here
             </Link>
